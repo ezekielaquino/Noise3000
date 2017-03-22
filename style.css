@@ -29,3 +29,9 @@ body {
   height: 80vh;
 }
 
+@media (max-width: 600px) {
+  .headline img {
+    width: 90vw;
+    height: auto;
+  }
+}
