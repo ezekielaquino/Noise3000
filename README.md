@@ -2,12 +2,14 @@
 Delicious film grain for the internet and beyond (in HD!)
 
 [🍒 VISIT THE PROJECT (MINI DEMO) WEBSITE](http://ezekielaquino.com/Noise3000)
+
 [#2: ANOTHER DEMO: Noise in container](http://ezekielaquino.com/Noise3000/index2.html)
 
 ## Why?
 Because Why Not™? Sometimes grain can be good. Get that paper, film, tangible feels pain-free and performant.
 
 [💅🏾 THE PROJECT SITE IS A MINI DEMO](http://ezekielaquino.com/Noise3000)
+
 [#2: ANOTHER DEMO: Noise in container](http://ezekielaquino.com/Noise3000/index2.html)
 
 ## What?
