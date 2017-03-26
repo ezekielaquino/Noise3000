@@ -29,9 +29,44 @@ body {
   height: 80vh;
 }
 
+.rembrandt {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white url('https://d2mpxrrcad19ou.cloudfront.net/item_images/355127/8458348_fullsize.jpg') no-repeat center center / contain;
+}
+
+#noise {
+  width: 50vw;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-left: 2px solid black;
+}
+
+#noise h2 {
+  position: absolute;
+  font-family: 'Arial';
+  font-weight: bold;
+  top: 10px;
+  left: 10px;
+  margin: 0;
+}
+
 @media (max-width: 600px) {
   .headline img {
     width: 90vw;
     height: auto;
+  }
+
+  #noise {
+    width: 100vw;
+    height: 50vh;
+    top: 50vh;
+    border-left: 0;
+    border-top: 2px solid black;
   }
 }
