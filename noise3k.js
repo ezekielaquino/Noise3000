@@ -13,11 +13,12 @@
     options = options || {};
 
     var noise = document.createElement('div');
+    var style = document.createElement('style');
     var width = window.innerWidth * 5;
     var height = window.innerHeight * 5;
     var container = document.body;
-    var positions = [];
-    var elem;
+    var frames = '';
+    var keyframes, elem;
 
     if (options.container) {
       var wrapper = document.createElement('div');
@@ -43,8 +44,13 @@
     for (var i = 0; i < 100; i++) {
       var px = Math.floor(Math.random() * 30);
       var py = Math.floor(Math.random() * 30);
-      positions.push({ x: px * -1, y: py });
+      frames += i + '% { transform: translate3d('+ px +'%, '+ py +'%, 0) }'
     }
+
+    keyframes = '@keyframes noise3k {'+ frames +'}'
+
+    style.innerHTML = keyframes;
+    document.getElementsByTagName('head')[0].appendChild(style);
 
     noise.classList.add('noise3k');
     noise.style.pointerEvents = 'none';
@@ -56,23 +62,11 @@
     noise.style.left = (window.innerWidth / 2) - (width / 2) + 'px';
     noise.style.position = options.container ? 'absolute': 'fixed';
     noise.style.zIndex = '99999';
+    noise.style.animation = 'noise3k 1s infinite';
 
     container.appendChild(noise);
 
     elem = document.querySelector('.noise3k');
-
-    window.requestAnimationFrame(animate);
-
-    // Animate the grain
-    function animate(time) {
-      if (elem) {
-        var r = Math.floor(Math.random() * positions.length);
-        var position = positions[r];
-        noise.style.transform = 'translate3d(' + position.x + '%, ' + position.y + '%, 0)';
-      }
-
-      window.requestAnimationFrame(animate);
-    }
   }; // Noise3000
 
 
